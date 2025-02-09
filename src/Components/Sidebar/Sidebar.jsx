@@ -46,59 +46,56 @@ export default function Sidebar() {
         </svg>
       </button>
 
-      <aside
-        ref={sidebarRef}
-        className={`fixed top-0 left-0 z-40 h-screen bg-gray-50 dark:bg-gray-800 transition-transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 lg:static`}
-        aria-label="Sidebar"
-      >
-        <div className="h-full px-3 py-4 overflow-y-auto">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-gray-500 hover:text-red-500 lg:hidden"
-          >
-            <i className="fa-solid fa-times text-2xl"></i>
-          </button>
+<aside
+  ref={sidebarRef}
+  className={`fixed top-0 left-0 z-40 w-64 h-screen bg-gray-50 dark:bg-gray-800 transition-transform ${
+    isOpen ? "translate-x-0" : "-translate-x-full"
+  } lg:translate-x-0 lg:static lg:w-64`}
+  aria-label="Sidebar"
+>
+  <div className="h-full px-3 py-4 overflow-y-auto">
+    <button
+      onClick={() => setIsOpen(false)}
+      className="absolute top-4 right-4 text-gray-500 hover:text-red-500 lg:hidden"
+    >
+      <i className="fa-solid fa-times text-2xl"></i>
+    </button>
 
-          <Link to="/" className="flex items-center ps-2.5 mb-5">
-            <img src={logo} className="w-full me-3" alt="Flowbite Logo" />
-          </Link>
+    <Link to="/" className="flex items-center ps-2.5 mb-5">
+      <img src={logo} className="w-full me-3" alt="Flowbite Logo" />
+    </Link>
 
-          <ul className="space-y-2 font-medium">
-            <li>
-              <Link
-                to="/"
-                className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 transition-all hover:shadow-xl font-semibold text-lg shadow-orange-300 shadow-lg mb-6 bg-primary text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                <i className="fa-solid fa-utensils"></i>
-                <span className="ms-3">Meals</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 border-2 transition-all hover:shadow-xl font-semibold text-lg"
-                onClick={() => setIsOpen(false)}
-              >
-                <i className="fa-solid fa-utensils"></i>
-                <span className="ms-3">Ingredients</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 border-2 transition-all hover:shadow-xl font-semibold text-lg"
-                onClick={() => setIsOpen(false)}
-              >
-                <i className="fa-solid fa-utensils"></i>
-                <span className="ms-3">Area</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  );
-}
+    <ul className="space-y-2 font-medium">
+      <li>
+        <Link
+          to="/"
+          className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 transition-all hover:shadow-xl font-semibold text-lg shadow-orange-300 shadow-lg mb-6 bg-primary text-white"
+          onClick={() => setIsOpen(false)}
+        >
+          <i className="fa-solid fa-utensils"></i>
+          <span className="ms-3">Meals</span>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/"
+          className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 border-2 transition-all hover:shadow-xl font-semibold text-lg"
+          onClick={() => setIsOpen(false)}
+        >
+          <i className="fa-solid fa-utensils"></i>
+          <span className="ms-3">Ingredients</span>
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/"
+          className="flex items-center py-2 px-6 rounded-xl dark:text-white hover:scale-105 border-2 transition-all hover:shadow-xl font-semibold text-lg"
+          onClick={() => setIsOpen(false)}
+        >
+          <i className="fa-solid fa-utensils"></i>
+          <span className="ms-3">Area</span>
+        </Link>
+      </li>
+    </ul>
+  </div>
+</aside>
